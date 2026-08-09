@@ -1,0 +1,13 @@
+# Per-session hook bookkeeping
+.claude/.session/
+
+# Local machine settings — never shared
+.claude/settings.local.json
+
+# Raw data and generated artifacts: keep the code and the notes, not the outputs
+data/raw/
+outputs/
+
+# OS and editor noise
+.DS_Store
+.obsidian/workspace.json

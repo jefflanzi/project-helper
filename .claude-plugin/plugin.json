@@ -1,0 +1,10 @@
+{
+  "name": "project-helper",
+  "displayName": "Project Helper",
+  "version": "0.1.0",
+  "description": "Keep Claude projects current and resumable: scaffold new projects, adopt existing repos, and maintain them with handoff, file-cleanup, and project-cleanup passes.",
+  "author": {
+    "name": "Jeff Lanzi"
+  },
+  "license": "MIT"
+}

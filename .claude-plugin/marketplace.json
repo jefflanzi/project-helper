@@ -1,0 +1,13 @@
+{
+  "name": "project-helper",
+  "owner": {
+    "name": "Jeff Lanzi"
+  },
+  "plugins": [
+    {
+      "name": "project-helper",
+      "source": "./",
+      "description": "Keep Claude projects current and resumable: scaffold new projects, adopt existing repos, and maintain them with handoff, file-cleanup, and project-cleanup passes."
+    }
+  ]
+}
