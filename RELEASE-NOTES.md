@@ -2,6 +2,15 @@
 
 **This file's job: say what changed for users in each shipped version, newest first, in plain language. Every version bump gets an entry in the same edit.**
 
+## 0.2.0 — 2026-08-10
+
+Four refinements from an autonomous test campaign (55 headless runs against synthetic and real repos).
+
+- **Recurring series get a home on day one.** When you declare a report or deliverable recurring ("we'll do one weekly"), the template now says it gets its own directory — `CLAUDE.md` and all — at the first instance, and never lands in `LOG.md`. Previously each session improvised its own filing.
+- **Homeless facts get a home, never `CLAUDE.md`.** The template now says what to do with a fact whose destination doesn't exist yet: create `reference/` or the owning document — instead of folding it into the instructions file.
+- **`project-cleanup` proposes when nobody can approve.** In a headless or unattended run, every action — including small repairs — is now explicitly a proposal.
+- **`handoff` never invents an owner.** An open question whose owner isn't stated in the project's documents or the conversation is marked unassigned instead of guessed.
+
 ## 0.1.0 — 2026-08-07
 
 Initial release.

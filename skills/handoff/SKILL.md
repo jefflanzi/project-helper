@@ -32,7 +32,7 @@ Two questions sharpen it:
 
 **1. Rewrite `STATE.md` from scratch.**
 
-Not edit — rewrite. Read it, then write the file fresh from what you actually know: active focus, next actions, open questions with owners, ruled out. Completed work is **deleted**; it goes to the history file in step 3.
+Not edit — rewrite. Read it, then write the file fresh from what you actually know: active focus, next actions, open questions with owners, ruled out. Never invent an owner — a question whose owner is not stated in the project's own documents or the conversation is marked "(owner unassigned)". Completed work is **deleted**; it goes to the history file in step 3.
 
 **2. Rewrite every other file that failed the test.**
 

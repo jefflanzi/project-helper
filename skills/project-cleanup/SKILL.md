@@ -11,7 +11,7 @@ This skill is the periodic separation pass: keep the loop, archive the iteration
 
 ## Ground rules
 
-- **Review first, then act — as two separate deliverables.** Present the full assessment and proposed dispositions before moving anything. The user redirects cheaply on a proposal and expensively on a done deed.
+- **Review first, then act — as two separate deliverables.** Present the full assessment and proposed dispositions before moving anything. The user redirects cheaply on a proposal and expensively on a done deed. If approval cannot be given in this session — the run is headless, or no one is there to answer — every action is a proposal, including small repairs.
 - **Verify aliveness against reality, not labels.** A file marked "draft" may be load-bearing (another doc defers to its methodology); a file that looks current may describe a merged branch. Check tickets, PRs, git dates, and cross-references before classifying anything.
 - **Prefer reversible moves.** `git mv` to `archive/` preserves history and is cheap to undo. Reserve deletion for things that are regenerable (build artifacts, run output, generated files) or already captured in git history (applied patches, superseded snapshots). When unsure, archive.
 - **Never commit on your own.** Make a clean snapshot commit of pre-existing work first *with the user's explicit permission*, so the refresh isn't tangled into a dirty tree — then leave the refresh itself uncommitted for review.

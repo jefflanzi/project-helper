@@ -23,7 +23,7 @@ Read `LOG.md` only when you need history. It is long by design. Search it; do no
 | A settled choice and its reasoning | `DECISIONS.md` | ADR entries, newest first; superseded in place, never deleted |
 | High-level overview of the system — files, disciplines, skills | `README.md` | Updated in the same edit that changes a convention or skill |
 
-**Directories** — for kinds of content that recur. A directory earns its place the same way a file does, one level up: the files inside share one declared job and one set of conventions, with many iterations or variations of that kind of thing. One-off content does not get a folder.
+**Directories** — for kinds of content that recur. A directory earns its place the same way a file does, one level up: the files inside share one declared job and one set of conventions, with many iterations or variations of that kind of thing. One-off content does not get a folder. A series the user declares recurring ("we'll do one weekly") has already earned it: create its directory — `CLAUDE.md`, table row, and all — at the first instance. A deliverable series never lives in `LOG.md`; the log records that an instance happened, the directory holds it.
 
 | Content | Home | Discipline |
 |---|---|---|
@@ -31,7 +31,7 @@ Read `LOG.md` only when you need history. It is long by design. Search it; do no
 | Working scratch, hypotheses, dead ends | `notes/` | Free-form |
 | Retired material kept for provenance | `archive/` | Never edited, never cited as current |
 
-Anything not on this list gets a home before it gets written.
+Anything not on this list gets a home before it gets written. A fact whose home does not exist yet gets that home created — `reference/` (with its `CLAUDE.md` and table row) or the document that owns its kind — never this file.
 
 ## Directory conventions
 
