@@ -1,17 +1,17 @@
 ---
 name: new-project
-description: Scaffold and set up a new Claude project in the current directory — create the core documents (CLAUDE.md, BRIEF.md, STATE.md, LOG.md, DECISIONS.md) from the plugin's templates, interview the user to fill in the brief and working conventions, settle the git convention, and trim what the project will not use. Use when the user says new project, start a project, set this folder up as a project, scaffold a project here, or initialize the project structure in an empty or nearly empty directory. For a repo that already has real content, use adopt-project instead.
+description: Scaffold and set up a new Claude project in the current directory — create the core documents (CLAUDE.md, BRIEF.md, STATE.md, LOG.md, DECISIONS.md) from the plugin's templates, interview the user to fill in the brief and working conventions, settle the git convention, and trim what the project will not use. Use when the user says new project, start a project, scaffold a project here, or initialize the project structure in an empty or nearly empty directory. For a repo that already has real content, use setup-project instead.
 ---
 
 # New project
 
 Set up a new project in the current directory. The scaffolds ship with this plugin; every document starts as a template with angle-bracket placeholders, and this interview fills them in.
 
-If the directory already has real content — code, documents, its own history — stop and use **adopt-project** instead; this skill is for empty or nearly empty directories.
+If the directory already has real content — code, documents, its own history — stop and use **setup-project** instead; this skill is for empty or nearly empty directories.
 
 ## 1. Scaffold the documents
 
-Copy every file from `${CLAUDE_PLUGIN_ROOT}/templates/` into the project root (including the dotfiles). Never overwrite: if a target file already exists, skip it and say so. If several already exist, this is probably an adopt, not a new project — say that and switch.
+Copy every file from `${CLAUDE_PLUGIN_ROOT}/templates/` into the project root (including the dotfiles). Never overwrite: if a target file already exists, skip it and say so. If several already exist, this is probably a setup, not a new project — say that and switch.
 
 No `.claude/` directory is created. The skills and the session-start hook come with the plugin; the project itself is pure markdown.
 

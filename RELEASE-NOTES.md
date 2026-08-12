@@ -2,6 +2,10 @@
 
 **This file's job: say what changed for users in each shipped version, newest first, in plain language. Every version bump gets an entry in the same edit.**
 
+## 0.2.1 — 2026-08-11
+
+- **`adopt-project` renamed to `setup-project`.** Same skill, same behavior — the name reads more clearly for an existing repo that's getting the structure added. "Adopt this project" still works as a spoken trigger; the invoked name is `/project-helper:setup-project`.
+
 ## 0.2.0 — 2026-08-10
 
 Four refinements from an autonomous test campaign (55 headless runs against synthetic and real repos).

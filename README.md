@@ -25,7 +25,7 @@ claude
 
 Working from a local clone instead, add the marketplace by path: `/plugin marketplace add /path/to/project-helper`.
 
-Then, in any empty directory, say **"set this up as a new project"** (or run `/project-helper:new-project`) and answer a few questions. In a repo that already has content, say **"adopt this project"** instead. That is the whole setup — no cloning, no copying.
+Then, in any empty directory, say **"start a new project"** (or run `/project-helper:new-project`) and answer a few questions. In a repo that already has content, say **"set up this project"** instead (`/project-helper:setup-project`). That is the whole setup — no cloning, no copying.
 
 Updates ship through the plugin: `/plugin update project-helper`, and every project picks up the new version at once.
 
@@ -45,7 +45,7 @@ Plus optional directories you add only when you need them: `reference/`, `notes/
 
 Documents are written differently for their two possible readers, and the structure says which is which. Files **for people** — briefs, specs, reports — lead with the answer, prefer bullets and tables over paragraphs, and follow "less is more": a reader retains what they can process in one sitting. Files that are **working context** — notes, data pulls, research the assistant works from — optimize for completeness and retrieval instead: exact values, no personality, as long as they need to be. Each directory's `CLAUDE.md` declares its folder's audience; conversation itself follows the for-people rules. This is opinionated on purpose — there is nothing to configure, and the defaults are the product.
 
-The instructions file is `CLAUDE.md` at every level — the root and each directory use the same name, and Claude Code loads all of them natively. If you also work with [AGENTS.md-aware tools](https://agents.md), keep your content in `AGENTS.md` and make `CLAUDE.md` a one-line `@AGENTS.md` import — `adopt-project` sets an existing repo up that way automatically.
+The instructions file is `CLAUDE.md` at every level — the root and each directory use the same name, and Claude Code loads all of them natively. If you also work with [AGENTS.md-aware tools](https://agents.md), keep your content in `AGENTS.md` and make `CLAUDE.md` a one-line `@AGENTS.md` import — `setup-project` sets an existing repo up that way automatically.
 
 Every one of those files opens with a one-line statement of its job. That line is the contract — it sits at the top of the file, so it is in front of you at the moment you edit it, which is the moment that decides whether the file stays concise.
 
@@ -56,7 +56,7 @@ Every one of those files opens with a one-line statement of its job. That line i
 | Skill | What it does |
 |---|---|
 | `new-project` | Scaffolds an empty directory and runs the setup interview: fills `BRIEF.md` and `CLAUDE.md`'s working conventions, checks that git is installed and asks how it should be used (auto-commit at checkpoints, or ask before committing), trims the homes the project will not use. |
-| `adopt-project` | Setup for an existing repo. Adds the missing documents without touching anything already there, then offers the optional `project-cleanup` reshape — the step where files actually move. |
+| `setup-project` | Setup for an existing repo. Adds the missing documents without touching anything already there, then offers the optional `project-cleanup` reshape — the step where files actually move. |
 | `handoff` | The session-end pass. Saves where the project stands so the next session — yours, another tool's, or another person's — can resume cold: rewrites `STATE.md` from scratch, logs the session to `LOG.md`, re-aligns any document that has drifted from its job, and ends at a commit boundary — committing itself or handing the clean tree to you, per the git convention chosen at setup. |
 | `file-cleanup` | The one-file pass. Rewrites a single document so every line serves the file's stated job, moving displaced content to the files that own it. |
 | `project-cleanup` | The periodic deeper pass. A fresh-eyes audit of which files should exist: archives completed iterations, deletes dead weight, restructures around the durable process. |
