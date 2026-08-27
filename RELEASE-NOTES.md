@@ -2,6 +2,10 @@
 
 **This file's job: say what changed for users in each shipped version, newest first, in plain language. Every version bump gets an entry in the same edit.**
 
+## 0.2.2 — 2026-08-27
+
+- **Shared output links only to what the audience can open.** The writing-for-people profile (template `CLAUDE.md`, mirrored in the README) now says: anything shared beyond the machine — an artifact, a Slack or Notion post, an email — never links to or cites local working files. Link to Notion, Linear, GitHub, or a published artifact instead, pushing the content to one of those homes first when it lives nowhere else. `file-cleanup` now also replaces local-file references when tightening a shared document.
+
 ## 0.2.1 — 2026-08-11
 
 - **`adopt-project` renamed to `setup-project`.** Same skill, same behavior — the name reads more clearly for an existing repo that's getting the structure added. "Adopt this project" still works as a spoken trigger; the invoked name is `/project-helper:setup-project`.

@@ -50,6 +50,7 @@ Every document serves one of two readers, and its home decides which: each direc
 - Lead with the answer or recommendation. Supporting detail follows, for readers who want it.
 - Prefer bullets, tables, and headings over paragraphs; short sentences over long ones.
 - Less is more: a reader retains what they can process in one sitting. Include what changes their decision or next action; cut the rest.
+- Links must work where the reader is. Anything shared beyond this machine — an artifact, a Slack or Notion post, an email — never links to or cites local files; they are working files readers cannot open. Link to sources the audience can reach: Notion, Linear, GitHub, published artifacts. If a fact lives only in a working file, push it to one of those homes first and link there; publish an artifact as the fallback.
 
 **For working context** — notes, data pulls, research, records the assistant keeps to work from:
 - Completeness beats brevity. These files load on demand, so length costs nothing until it costs accuracy.
