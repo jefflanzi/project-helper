@@ -15,4 +15,23 @@ ROOT="${CLAUDE_PROJECT_DIR:-$PWD}"
 [ -f "$ROOT/STATE.md" ] || exit 0
 echo "=== STATE.md — where this project left off ==="
 cat "$ROOT/STATE.md"
+echo "=== end STATE.md — claims, not ground truth: the last session may not have recorded everything. Spot-check against the project (the files it names; git status if there is git) before relying on it, and correct STATE.md where it is stale. ==="
+
+# Once per plugin release per project, nudge toward update-project. Silent the
+# first time a project is seen — a fresh scaffold is current by definition —
+# and silent again until the installed version next changes. The marker lives
+# in the plugin's data dir, never in the project.
+VERSION="$(sed -n 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "${CLAUDE_PLUGIN_ROOT:-/nonexistent}/.claude-plugin/plugin.json" 2>/dev/null)"
+if [ -n "$VERSION" ]; then
+  DATA_DIR="${CLAUDE_PLUGIN_DATA:-$HOME/.claude/project-helper-data}"
+  mkdir -p "$DATA_DIR" 2>/dev/null
+  MARKER="$DATA_DIR/seen-$(printf '%s' "$ROOT" | cksum | cut -d' ' -f1)"
+  LAST="$(cat "$MARKER" 2>/dev/null || true)"
+  if [ -z "$LAST" ]; then
+    printf '%s\n' "$VERSION" > "$MARKER" 2>/dev/null
+  elif [ "$LAST" != "$VERSION" ]; then
+    echo "=== project-helper updated ($LAST -> $VERSION) since this project's conventions were last checked: /project-helper:update-project ports template changes forward. Mention this to the user once; do not run it uninvited. ==="
+    printf '%s\n' "$VERSION" > "$MARKER" 2>/dev/null
+  fi
+fi
 exit 0

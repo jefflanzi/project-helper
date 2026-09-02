@@ -12,7 +12,9 @@ An existing repo, with its own files and history, gets the project-helper struct
 ## Ground rules
 
 - **Create only what is missing.** Never overwrite, move, rename, or delete an existing file — not even one that looks abandoned.
+- **Existing files stay exactly where they are.** The template's routing tables say where *new* content goes; they are not instructions to file existing content into homes. A loose note that "belongs in `notes/`" stays put — moving it is **project-cleanup**'s job, after its own review.
 - **Collisions are reported, not resolved.** If a file the structure wants already exists, leave it alone, note it in the report, and propose the smallest merge. Apply a merge only with the user's explicit OK on that specific edit.
+- **Headless or unattended, there is no OK.** With nobody to approve, every merge and collision resolution stays a proposal in the report — applied never, not even the safe-looking ones.
 - **Every action is named in the report.** The user should be able to undo the whole setup by deleting the listed files.
 
 ## The pass

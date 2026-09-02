@@ -11,6 +11,8 @@ Do not put facts, status, decisions, or findings in this file. Every one of thos
 
 Read `LOG.md` only when you need history. It is long by design. Search it; do not load it.
 
+`STATE.md` is claims, not ground truth — the last session may not have recorded everything. Before relying on it, spot-check it against the project itself: the files it names, and `git status` if the project uses git. Correct `STATE.md` where it is stale; touch nothing else for this.
+
 ## Where things go
 
 **Core files** — single documents, one job each:
@@ -78,6 +80,9 @@ These rules apply to every edit, not to a periodic cleanup. Documents do not blo
 - **`/handoff`** before switching tools, before a break, or at the end of a session. Rewrites `STATE.md` from scratch, logs the session, re-aligns any working document that has drifted from its stated job, and ends at a commit boundary per the git convention below.
 - **`/file-cleanup`** when one document stops reading cleanly. Rewrites that file against its job and moves displaced content to the files that own it.
 - **`/project-cleanup`** every few weeks or after a phase lands, when the question is which files should exist rather than what they say.
+- **`/update-project`** after a plugin update — ports new template conventions into this project's `CLAUDE.md`, preserving your own.
+
+Between passes, record as you go: when a decision settles, direction changes, something is ruled out, or a milestone completes, put it in `STATE.md` or `LOG.md` in that moment — a few lines, not a full handoff. Sessions end without warning; a session that never reaches `/handoff` should still leave the documents true.
 
 Neither is a substitute for the rules above. A periodic pass reliably catches the one document that has become obviously unreadable, and walks straight past the three that are quietly growing.
 

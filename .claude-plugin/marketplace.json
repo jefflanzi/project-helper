@@ -3,6 +3,7 @@
   "owner": {
     "name": "Jeff Lanzi"
   },
+  "description": "Project scaffolding and maintenance skills for Claude Code: start a project, adopt an existing repo, and keep it current with handoff and cleanup passes.",
   "plugins": [
     {
       "name": "project-helper",

@@ -48,7 +48,11 @@ Newest first, five lines or fewer. Anything deleted above that has lasting value
 
 Anything that has stopped being news and become a standing fact — an ID, a definition, a constraint — belongs in `reference/`, stated plainly.
 
-**5. End at a commit boundary.**
+**5. Check whether the plugin's conventions moved.**
+
+Read the top entry of `${CLAUDE_PLUGIN_ROOT}/RELEASE-NOTES.md`. If its version is newer than the last "conventions synced" line in the history file — or no such line exists and the recent notes name template or convention changes this project's `CLAUDE.md` visibly lacks — add one line to the handoff summary offering **update-project**. One line only; do not run it as part of the handoff.
+
+**6. End at a commit boundary.**
 
 A handoff is the natural checkpoint: the documents are freshly true and the session's work is complete. If the project uses git, follow the convention recorded in `CLAUDE.md`'s working conventions:
 

@@ -7,7 +7,7 @@ description: Scaffold and set up a new Claude project in the current directory �
 
 Set up a new project in the current directory. The scaffolds ship with this plugin; every document starts as a template with angle-bracket placeholders, and this interview fills them in.
 
-If the directory already has real content — code, documents, its own history — stop and use **setup-project** instead; this skill is for empty or nearly empty directories.
+**First, list the directory.** If it already has real content — code, documents, notes, its own history — this is **setup-project**'s job: stop, say so, and follow that skill's instructions instead, ground rules included (strictly additive; existing files stay exactly where they are). Do not run this skill's interview-and-trim flow in a directory with existing content, and do not blend the two — the trim step below is only safe when every file present is one this skill just created.
 
 ## 1. Scaffold the documents
 
@@ -55,6 +55,8 @@ Set the date in `LOG.md`'s first entry to today.
 ## 5. Trim what this project does not need
 
 The optional directories (`reference/`, `notes/`, `data/`, `outputs/`, `archive/`) are listed in `CLAUDE.md`'s directories table but not created. Create only the ones this project will use now, and remove the rows for the rest. An empty folder is a small lie about how the project is organized. If the project will not record decisions, delete `DECISIONS.md` and its row too.
+
+Trimming and directory creation apply only to files this skill scaffolded in step 1. A pre-existing file is never moved, filed into a new directory, renamed, or deleted here — not even one that obviously "belongs in `notes/`". If such files exist, this should have been setup-project (see the check at the top); moving them is **project-cleanup**'s job, after its own review.
 
 Every directory you create gets its `CLAUDE.md` in the same step: one line stating the folder's job **and its audience**, then whatever conventions the interview surfaced — naming, required sections, lifecycle. If the user does not have conventions yet, the job-and-audience line alone is enough; conventions get added the first time two files in the folder need to agree on something.
 
